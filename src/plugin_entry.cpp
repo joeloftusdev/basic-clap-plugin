@@ -56,7 +56,7 @@ static constexpr clap_plugin_params_t extensionParams = {
     },
 
     .get_value = [] (const clap_plugin_t *_plugin, clap_id id, double *value) -> bool {
-        const auto *plugin = static_cast<MyPlugin *>(_plugin->plugin_data);
+        auto *plugin = static_cast<MyPlugin *>(_plugin->plugin_data);
         const auto i = (uint32_t) id;
         if (i >= P_COUNT) return false;
 

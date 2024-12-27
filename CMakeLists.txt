@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories(extern/clap/include)
 
-add_library(HelloCLAP SHARED src/plugin.cpp src/main.cpp src/gui.cpp)
+add_library(HelloCLAP SHARED src/plugin.cpp src/plugin_entry.cpp src/gui.cpp)
 
 set_target_properties(HelloCLAP PROPERTIES
     PREFIX ""
